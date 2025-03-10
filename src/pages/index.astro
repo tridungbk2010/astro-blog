@@ -1,10 +1,24 @@
 ---
 import Greeting from '../components/Greeting';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
 const pageTitle = 'Home Page';
+const dogs = await getCollection('dogs');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>My awesome blog subtitle</h2>
   <Greeting client:load messages={['Hej', 'Hallo', 'Hola', 'Habari']} />
+  <div>
+    <h4>Dogs</h4>
+    <code>
+      {JSON.stringify(dogs)}
+    </code>
+    {
+      dogs.map((dog) => {
+        return <div>{dog.data.breed}</div>;
+      })
+    }
+  </div>
 </BaseLayout>

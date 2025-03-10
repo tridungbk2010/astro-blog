@@ -1,0 +1,49 @@
+{
+  "dogs": [
+    {
+      "id": "1",
+      "breed": "Labrador",
+      "temperament": ["friendly", "energetic", "loyal"]
+    },
+    {
+      "id": "2",
+      "breed": "Poodle",
+      "temperament": ["playful", "energetic", "affectionate"]
+    },
+    {
+      "id": "3",
+      "breed": "German Shepherd",
+      "temperament": ["loyal", "brave", "alert"]
+    },
+    {
+      "id": "4",
+      "breed": "Golden Retriever",
+      "temperament": ["friendly", "intelligent", "caring"]
+    },
+    {
+      "id": "5",
+      "breed": "Poodle",
+      "temperament": ["playful", "energetic", "affectionate"]
+    }
+  ],
+  "cats": [
+    {
+      "id": 1,
+      "name": "Whiskers",
+      "breed": "Persian",
+      "temperament": ["playful", "energetic", "affectionate"]
+    },
+    {
+      "id": 2,
+      "name": "Mittens",
+      "breed": "Siamese",
+      "temperament": ["playful", "energetic", "affectionate"]
+    },
+    {
+      "id": 3,
+      "name": "Fluffy",
+      "breed": "Persian",
+      "temperament": ["playful", "energetic", "affectionate"]
+    }
+  ]
+}

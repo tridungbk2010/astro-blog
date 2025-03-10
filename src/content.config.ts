@@ -1,5 +1,5 @@
 // Import the glob loader
-import { glob } from "astro/loaders";
+import { glob, file } from "astro/loaders";
 // Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
 // Define a `loader` and `schema` for each collection
@@ -18,4 +18,16 @@ const blog = defineCollection({
   }),
 });
 // Export a single `collections` object to register your collection(s)
-export const collections = { blog };
+
+const dogs = defineCollection({
+  loader: file("src/data/pets.json", {
+    parser: (text) => JSON.parse(text).dogs,
+  }),
+  schema: z.object({
+    id: z.string(),
+    breed: z.string(),
+    temperament: z.array(z.string()),
+  }),
+});
+
+export const collections = { blog, dogs };
